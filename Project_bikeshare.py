@@ -7,9 +7,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-# aliases used
-GENDER_COL = "Gender"
-BIRTH_YEAR_COL = "Birth Year"   
+GENDER_COLUMN = "Gender"
+BIRTH_YEAR_COLUMN = "Birth Year"   
 
 def get_filters():
     """
@@ -162,19 +161,19 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print("User types are: ", user_types)
     
-    if GENDER_COL and BIRTH_YEAR_COL in df.columns:
+    if GENDER_COLUMN and BIRTH_YEAR_COLUMN in df.columns:
         # TO DO: Display counts of genderno
-        gender_counts = df[GENDER_COL].value_counts()
+        gender_counts = df[GENDER_COLUMN].value_counts()
         print("Gender counts are: ", gender_counts)
 
         # TO DO: Display earliest, most recent, and most common year of birth
-        earliest_year = df[BIRTH_YEAR_COL].min()
+        earliest_year = df[BIRTH_YEAR_COLUMN].min()
         print("The earliest year of birth: ", earliest_year)
 
-        most_recent_year = df[BIRTH_YEAR_COL].max()
+        most_recent_year = df[BIRTH_YEAR_COLUMN].max()
         print("The most recent year of birth: ", most_recent_year)
 
-        most_common_year = df[BIRTH_YEAR_COL].mode()[0]
+        most_common_year = df[BIRTH_YEAR_COLUMN].mode()[0]
         print("The most common year of birth: ", most_common_year)
     else:
         print("Gender data is not available for Washington")
