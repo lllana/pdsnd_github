@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-GENDER_COL = "Gender"
+GENDER_COLUMN = "Gender"
 BIRTH_YEAR_COL = "Birth Year"   
 
 def get_filters():
@@ -160,9 +160,9 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print("User types are: ", user_types)
     
-    if GENDER_COL and BIRTH_YEAR_COL in df.columns:
+    if GENDER_COLUMN and BIRTH_YEAR_COL in df.columns:
         # TO DO: Display counts of genderno
-        gender_counts = df[GENDER_COL].value_counts()
+        gender_counts = df[GENDER_COLUMN].value_counts()
         print("Gender counts are: ", gender_counts)
 
         # TO DO: Display earliest, most recent, and most common year of birth
